@@ -1,0 +1,25 @@
+﻿
+name: Trigger Azure DevOps Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    name: Azure Pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (optional)
+        uses: actions/checkout@v4
+
+      - name: Trigger Azure DevOps pipeline
+        uses: Azure/pipelines@v1
+        with:
+          azure-devops-project-url: https://dev.azure.com/Divyanshorg/Agile%20Project
+          azure-pipeline-name: 'Devops173.gitapp'
+          azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
