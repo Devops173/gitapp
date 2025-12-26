@@ -21,5 +21,5 @@ jobs:
         uses: Azure/pipelines@v1
         with:
           azure-devops-project-url: https://dev.azure.com/Divyanshorg/Agile%20Project
-          azure-pipeline-name: 'Devops173.gitapp'
+          azure-pipeline-name: 'webapp.git'
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
